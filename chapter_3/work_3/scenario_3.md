@@ -7,10 +7,15 @@ Use the directory `chapter_3/work_3/` as your project directory for work related
 ## Assignment 3
 a. Setup Docker container:
 * i. Run Docker Desktop.
+Used Podman instead of Docker Desktop
 * ii. Retrieve Docker Compose file.
+Used the docker-compose file in podman
 * iii. Update Docker Compose file.
+Updated the Docker Compose file
 * iv. Add requirements.
+Added neccesary reqs for the project ------  "dbt-core==1.8.0  dbt-postgres==1.8.2 faker==18.4.0 polars==1.8.1"
 * v. Create Dockerfile.
+Used  ------   "podman compose --file .\docker-compose.yml up"
 
 b. Create dbt:
 * i. Create project.
@@ -18,13 +23,26 @@ b. Create dbt:
 * iii. Create sources.
 * iv. Create models.
 
+dbt up and running
+
+
 c. Create Airflow:
 * i. Run containers.
 * ii. Login.
 * iii. Setup Connection.
 * iv. Create DAG.
 * v. Run DAG.
+Found a problem where there were multiple lines with Headers that resulted in a fail state in Airflow.
+"""
+psycopg2.errors.InvalidTextRepresentation: invalid input syntax for type numeric: "personal_number"
+CONTEXT:  COPY raw_batch_data, line 1108, column personal_number: "personal_number"
+
+"""
+Solved it by checking if the file exists, if it existed then i would not add another header row in from lines 93 -> 98
+Containers created, could login on localhost:8080 and see the created DAG. Runned it with a status of succes in 23 seconds
 
 d. Setup pgAdmin 4 database:
 * i. Connect to database.
+Connected to the airflow from pgAdmin 4
 * ii. Check data in database.
+Data uploaded and ok
