@@ -5612,3 +5612,94 @@
 [2025-04-10T11:50:31.520+0000] {logging_mixin.py:190} INFO - [2025-04-10T11:50:31.519+0000] {dag.py:3239} INFO - Sync 1 DAGs
 [2025-04-10T11:50:31.617+0000] {logging_mixin.py:190} INFO - [2025-04-10T11:50:31.617+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
 [2025-04-10T11:50:31.652+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.670 seconds
+[2025-04-10T13:19:35.140+0000] {processor.py:186} INFO - Started process (PID=5164) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:19:35.142+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:19:35.143+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:19:35.143+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:19:35.314+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:19:35.344+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:19:35.343+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:19:35.372+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:19:35.372+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:19:35.399+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.264 seconds
+[2025-04-10T13:20:05.686+0000] {processor.py:186} INFO - Started process (PID=5167) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:20:05.687+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:20:05.689+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:20:05.688+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:20:05.857+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:20:05.883+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:20:05.883+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:20:05.914+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:20:05.914+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:20:05.942+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.263 seconds
+[2025-04-10T13:20:35.992+0000] {processor.py:186} INFO - Started process (PID=5170) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:20:35.994+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:20:35.995+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:20:35.995+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:20:36.180+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:20:36.209+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:20:36.208+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:20:36.237+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:20:36.236+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:20:36.266+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.281 seconds
+[2025-04-10T13:21:06.548+0000] {processor.py:186} INFO - Started process (PID=5173) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:21:06.549+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:21:06.552+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:21:06.551+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:21:06.728+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:21:06.756+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:21:06.756+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:21:06.780+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:21:06.780+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:21:06.797+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.257 seconds
+[2025-04-10T13:21:36.864+0000] {processor.py:186} INFO - Started process (PID=5176) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:21:36.866+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:21:36.867+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:21:36.867+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:21:37.068+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:21:37.102+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:21:37.102+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:21:37.145+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:21:37.145+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:21:37.175+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.318 seconds
+[2025-04-10T13:22:07.375+0000] {processor.py:186} INFO - Started process (PID=5179) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:22:07.376+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:22:07.378+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:22:07.378+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:22:07.554+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:22:07.577+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:22:07.577+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:22:07.602+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:22:07.601+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:22:07.621+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.254 seconds
+[2025-04-10T13:22:37.760+0000] {processor.py:186} INFO - Started process (PID=5182) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:22:37.762+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:22:37.764+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:22:37.763+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:22:37.960+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:22:37.987+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:22:37.987+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:22:38.016+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:22:38.016+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:22:38.043+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.291 seconds
+[2025-04-10T13:23:08.214+0000] {processor.py:186} INFO - Started process (PID=5185) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:23:08.216+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:23:08.217+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:23:08.217+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:23:08.380+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:23:08.405+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:23:08.405+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:23:08.431+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:23:08.431+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:23:08.454+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.245 seconds
+[2025-04-10T13:23:38.577+0000] {processor.py:186} INFO - Started process (PID=5188) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:23:38.579+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:23:38.580+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:23:38.580+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:23:38.763+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:23:38.789+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:23:38.789+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:23:38.817+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:23:38.816+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:23:38.836+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.265 seconds
+[2025-04-10T13:24:09.061+0000] {processor.py:186} INFO - Started process (PID=5191) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:24:09.063+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:24:09.064+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:24:09.064+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:24:09.234+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:24:09.264+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:24:09.263+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:24:09.287+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:24:09.287+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:24:09.310+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.257 seconds
+[2025-04-10T13:24:39.430+0000] {processor.py:186} INFO - Started process (PID=5193) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:24:39.431+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:24:39.432+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:24:39.432+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:24:39.622+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:24:39.658+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:24:39.658+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:24:39.688+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:24:39.688+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:24:39.712+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.290 seconds
+[2025-04-10T13:25:09.963+0000] {processor.py:186} INFO - Started process (PID=5196) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:25:09.964+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:25:09.966+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:25:09.965+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:25:10.136+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:25:10.166+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:25:10.166+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:25:10.194+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:25:10.194+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:25:10.215+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.257 seconds
+[2025-04-10T13:25:40.368+0000] {processor.py:186} INFO - Started process (PID=5199) to work on /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:25:40.369+0000] {processor.py:914} INFO - Processing file /opt/airflow/dags/driven_data_pipeline.py for tasks to queue
+[2025-04-10T13:25:40.371+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:25:40.371+0000] {dagbag.py:588} INFO - Filling up the DagBag from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:25:40.563+0000] {processor.py:925} INFO - DAG(s) 'extract_raw_data_pipeline' retrieved from /opt/airflow/dags/driven_data_pipeline.py
+[2025-04-10T13:25:40.593+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:25:40.593+0000] {dag.py:3239} INFO - Sync 1 DAGs
+[2025-04-10T13:25:40.624+0000] {logging_mixin.py:190} INFO - [2025-04-10T13:25:40.624+0000] {dag.py:4180} INFO - Setting next_dagrun for extract_raw_data_pipeline to 2025-04-10 07:59:00+00:00, run_after=2025-04-11 07:00:00+00:00
+[2025-04-10T13:25:40.648+0000] {processor.py:208} INFO - Processing /opt/airflow/dags/driven_data_pipeline.py took 0.289 seconds
