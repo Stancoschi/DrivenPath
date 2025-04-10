@@ -4,6 +4,7 @@ import csv
 import logging
 import uuid
 import polars as pl
+import os
 
 from faker import Faker
 from datetime import date, datetime, timedelta
@@ -87,11 +88,15 @@ def _write_to_csv() -> None:
         rows = random.randint(100_372, 100_372)
     else:
         rows = random.randint(0, 1_101)
+
+    ## Check if the file exists to determinewhether to write headers
+    file_exists =  os.path.isfile("/opt/airflow/data/raw_data.csv")
     
     # Open the CSV file for writing.
-    with open("/opt/airflow/data/raw_data.csv", mode="a", encoding="utf-8", newline="") as file:
+    with open("/opt/airflow/data/raw_data.csv", mode="a", encoding="Utf-8", newline="") as file:
         writer = csv.writer(file)
-        writer.writerow(headers)
+        if not file_exists:
+            writer.writerow(headers)
         
         # Generate and write each record to the CSV.
         for _ in range(rows):
@@ -105,7 +110,7 @@ def _add_id() -> None:
     Adds a unique UUID to each row in a CSV file.
     """
     # Load the CSV into a Polars DataFrame.
-    df = pl.read_csv("/opt/airflow/data/raw_data.csv")
+    df = pl.read_csv("/opt/airflow/data/raw_data.csv", infer_schema_length=10000)
     # Generate a list of UUIDs (one for each row).
     uuid_list = [str(uuid.uuid4()) for _ in range(df.height)]
     # Add a new column with unique IDs.
@@ -126,7 +131,7 @@ def _update_datetime() -> None:
         current_time = datetime.now().replace(microsecond=0)
         yesterday_time = str(current_time - timedelta(days=1))
         # Load the CSV into a Polars DataFrame.
-        df = pl.read_csv("/opt/airflow/data/raw_data.csv")
+        df = pl.read_csv("/opt/airflow/data/raw_data.csv", infer_schema_length=10000)
         # Replace all values in the 'accessed_at' column with yesterday's timestamp.
         df = df.with_columns(pl.lit(yesterday_time).alias("accessed_at"))
         # Save the updated DataFrame back to a CSV file.
@@ -157,6 +162,8 @@ default_args = {
     'depends_on_past': False,
     'retries': 0,
 }
+
+
 
 # Define the DAG.
 dag = DAG(
