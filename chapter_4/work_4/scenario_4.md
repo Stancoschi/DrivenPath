@@ -4,20 +4,32 @@ For the fourth chapter/sprint, you need to consolidate the pipeline that was dev
 ## Instructions 4
 Use the directory `chapter_4/work_4/` as your project directory for work related to **Chapter 4** for **LeadData** company.
 
+
+## Bugs/Typos
+Requirements.txt was spelled requrements.txt
+
+
 ## Assignment 4
 a. Setup AWS Console:
 * i. Login to AWS.
+Logged on to AWS    
 * ii. Setup Console.
 
 b. Setup Services:
 * i. S3.
+Created an S3 bucket
 * ii. VPC.
+Created an VPC within AWS
 * iii. MWAA.
+Created an Apache Airflow container for management
 * iv. IAM.
+Created a role and group policies for that role
 
 c. Create services:
 * i. Create Glue jobs.
+Created Glue jobs
 * ii. Create Athena database.
+Created an Athena database
 * iii. Create Crawlers.
 
 d. Run DAG:
