@@ -1,0 +1,45 @@
+[2025-04-10T07:07:20.624+0000] {local_task_job_runner.py:123} INFO - ::group::Pre task execution logs
+[2025-04-10T07:07:20.686+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=non-requeueable deps ti=<TaskInstance: extract_raw_data_pipeline.run_dbt_trusted scheduled__2025-04-10T07:05:00+00:00 [queued]>
+[2025-04-10T07:07:20.724+0000] {taskinstance.py:2612} INFO - Dependencies all met for dep_context=requeueable deps ti=<TaskInstance: extract_raw_data_pipeline.run_dbt_trusted scheduled__2025-04-10T07:05:00+00:00 [queued]>
+[2025-04-10T07:07:20.725+0000] {taskinstance.py:2865} INFO - Starting attempt 1 of 1
+[2025-04-10T07:07:20.770+0000] {taskinstance.py:2888} INFO - Executing <Task(BashOperator): run_dbt_trusted> on 2025-04-10 07:05:00+00:00
+[2025-04-10T07:07:20.790+0000] {warnings.py:112} WARNING - /home/***/.local/lib/python3.12/site-packages/***/task/task_runner/standard_task_runner.py:70: DeprecationWarning: This process (pid=2631) is multi-threaded, use of fork() may lead to deadlocks in the child.
+  pid = os.fork()
+
+[2025-04-10T07:07:20.795+0000] {standard_task_runner.py:72} INFO - Started process 2633 to run task
+[2025-04-10T07:07:20.793+0000] {standard_task_runner.py:104} INFO - Running: ['***', 'tasks', 'run', 'extract_raw_data_pipeline', 'run_dbt_trusted', 'scheduled__2025-04-10T07:05:00+00:00', '--job-id', '477', '--raw', '--subdir', 'DAGS_FOLDER/driven_data_pipeline.py', '--cfg-path', '/tmp/tmpg_8xjmuw']
+[2025-04-10T07:07:20.797+0000] {standard_task_runner.py:105} INFO - Job 477: Subtask run_dbt_trusted
+[2025-04-10T07:07:20.901+0000] {task_command.py:467} INFO - Running <TaskInstance: extract_raw_data_pipeline.run_dbt_trusted scheduled__2025-04-10T07:05:00+00:00 [running]> on host c829a6b69367
+[2025-04-10T07:07:21.127+0000] {taskinstance.py:3131} INFO - Exporting env vars: AIRFLOW_CTX_DAG_OWNER='***' AIRFLOW_CTX_DAG_ID='extract_raw_data_pipeline' AIRFLOW_CTX_TASK_ID='run_dbt_trusted' AIRFLOW_CTX_EXECUTION_DATE='2025-04-10T07:05:00+00:00' AIRFLOW_CTX_TRY_NUMBER='1' AIRFLOW_CTX_DAG_RUN_ID='scheduled__2025-04-10T07:05:00+00:00'
+[2025-04-10T07:07:21.129+0000] {taskinstance.py:731} INFO - ::endgroup::
+[2025-04-10T07:07:21.163+0000] {subprocess.py:63} INFO - Tmp dir root location: /tmp
+[2025-04-10T07:07:21.165+0000] {subprocess.py:75} INFO - Running command: ['/usr/bin/bash', '-c', 'set -x; cd /opt/***/dbt && dbt run --select tag:trusted']
+[2025-04-10T07:07:21.196+0000] {subprocess.py:86} INFO - Output:
+[2025-04-10T07:07:21.199+0000] {subprocess.py:93} INFO - + cd /opt/***/dbt
+[2025-04-10T07:07:21.201+0000] {subprocess.py:93} INFO - + dbt run --select tag:trusted
+[2025-04-10T07:07:27.031+0000] {subprocess.py:93} INFO - [0m07:07:27  Running with dbt=1.8.0
+[2025-04-10T07:07:27.585+0000] {subprocess.py:93} INFO - [0m07:07:27  Registered adapter: postgres=1.8.2
+[2025-04-10T07:07:28.502+0000] {subprocess.py:93} INFO - [0m07:07:28  Found 9 models, 10 sources, 428 macros
+[2025-04-10T07:07:28.507+0000] {subprocess.py:93} INFO - [0m07:07:28
+[2025-04-10T07:07:28.756+0000] {subprocess.py:93} INFO - [0m07:07:28  Concurrency: 1 threads (target='dev')
+[2025-04-10T07:07:28.760+0000] {subprocess.py:93} INFO - [0m07:07:28
+[2025-04-10T07:07:28.776+0000] {subprocess.py:93} INFO - [0m07:07:28  1 of 4 START sql table model driven_trusted.non_pii_data ....................... [RUN]
+[2025-04-10T07:07:47.843+0000] {subprocess.py:93} INFO - [0m07:07:47  1 of 4 OK created sql table model driven_trusted.non_pii_data .................. [[32mSELECT 661556[0m in 19.06s]
+[2025-04-10T07:07:47.858+0000] {subprocess.py:93} INFO - [0m07:07:47  2 of 4 START sql table model driven_trusted.payment_data ....................... [RUN]
+[2025-04-10T07:07:57.805+0000] {subprocess.py:93} INFO - [0m07:07:57  2 of 4 OK created sql table model driven_trusted.payment_data .................. [[32mSELECT 661556[0m in 9.94s]
+[2025-04-10T07:07:57.809+0000] {subprocess.py:93} INFO - [0m07:07:57  3 of 4 START sql table model driven_trusted.pii_data ........................... [RUN]
+[2025-04-10T07:08:32.776+0000] {subprocess.py:93} INFO - [0m07:08:32  3 of 4 OK created sql table model driven_trusted.pii_data ...................... [[32mSELECT 680370[0m in 34.96s]
+[2025-04-10T07:08:32.782+0000] {subprocess.py:93} INFO - [0m07:08:32  4 of 4 START sql table model driven_trusted.technical_data ..................... [RUN]
+[2025-04-10T07:08:44.570+0000] {subprocess.py:93} INFO - [0m07:08:44  4 of 4 OK created sql table model driven_trusted.technical_data ................ [[32mSELECT 680370[0m in 11.78s]
+[2025-04-10T07:08:44.626+0000] {subprocess.py:93} INFO - [0m07:08:44
+[2025-04-10T07:08:44.629+0000] {subprocess.py:93} INFO - [0m07:08:44  Finished running 4 table models in 0 hours 1 minutes and 16.11 seconds (76.11s).
+[2025-04-10T07:08:44.942+0000] {subprocess.py:93} INFO - [0m07:08:44
+[2025-04-10T07:08:44.945+0000] {subprocess.py:93} INFO - [0m07:08:44  [32mCompleted successfully[0m
+[2025-04-10T07:08:44.949+0000] {subprocess.py:93} INFO - [0m07:08:44
+[2025-04-10T07:08:44.956+0000] {subprocess.py:93} INFO - [0m07:08:44  Done. PASS=4 WARN=0 ERROR=0 SKIP=0 TOTAL=4
+[2025-04-10T07:08:47.332+0000] {subprocess.py:97} INFO - Command exited with return code 0
+[2025-04-10T07:08:47.415+0000] {taskinstance.py:340} INFO - ::group::Post task execution logs
+[2025-04-10T07:08:47.417+0000] {taskinstance.py:352} INFO - Marking task as SUCCESS. dag_id=extract_raw_data_pipeline, task_id=run_dbt_trusted, run_id=scheduled__2025-04-10T07:05:00+00:00, execution_date=20250410T070500, start_date=20250410T070720, end_date=20250410T070847
+[2025-04-10T07:08:47.524+0000] {local_task_job_runner.py:266} INFO - Task exited with return code 0
+[2025-04-10T07:08:47.602+0000] {taskinstance.py:3900} INFO - 0 downstream tasks scheduled from follow-on schedule check
+[2025-04-10T07:08:47.633+0000] {local_task_job_runner.py:245} INFO - ::endgroup::
