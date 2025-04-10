@@ -8,12 +8,21 @@ Use the directory `chapter_5/work_5/` as your project directory for work related
 a. Setup AWS Console:
 * i. Login to AWS.
 * ii. Setup Console.
+Logged into AWS and done the setup for the console
+
 
 b. Setup Services:
 a. Setup Services:
 * i. Create IAM user.
+Created "admin" user, 
+Provided access to AWS Management Console(Create an IAM user),
+Custom Passsword
+Permission Options -> Attach policies directly -> Administrator Access
+
 * ii. Create Access key.
+Created an CLI Access key and Secret Access Key
 * iii. Setup AWS CLI.
+Done the AWS CLI setup
 * iv. Setup Terraform.
 
 b. Run Test Terraform:
