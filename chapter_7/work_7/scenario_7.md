@@ -8,6 +8,7 @@ Use the directory `chapter_7/work_7/` as your project directory for work related
 a. Setup Kafka:
 * i. Create Docker Compose file.
 * ii. Run Kafka on Docker.
+Podman container up and running
 
 b. Setup topic:
 * i. Create topic.
@@ -15,7 +16,9 @@ b. Setup topic:
 
 c. Setup producer:
 * i. Create producer.
+Created streaming_producer.py
 * ii. Produce data.
+Installed "pip install kafka-python" and runned 
 
 d. Setup consumer:
 * i. Create consumer.

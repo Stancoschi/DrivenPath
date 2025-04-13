@@ -54,7 +54,7 @@ def create_consumer(topic: str) -> KafkaConsumer:
     consumer = KafkaConsumer(
         topic,
         bootstrap_servers=['localhost:9092'],
-        value_deserializer=lambda v: json.loads(v.decode('utf-8')),
+        value_deserializer=lambda v: (v.decode('utf-8') if v else None),
         auto_offset_reset='earliest',
         enable_auto_commit=True
     )
@@ -71,6 +71,7 @@ def connect_db(credentials: dict) -> psycopg2.connect:
         conn (psycopg2.connect): A connection object to the PostgreSQL database.
     """
     # Connect to the PostgreSQL server using the provided credentials.
+    print("Trimis catre POSTGRES")
     conn = psycopg2.connect(
         dbname=credentials['dbname'],
         user=credentials['user'],
@@ -147,7 +148,7 @@ if __name__ == "__main__":
 
     # Create Kafka consumer.
     consumer = create_consumer(topic)
-
+    
     # Create schema.
     schema_query = read_sql(schema_path)
     schema = create_object(connection, schema_query)
