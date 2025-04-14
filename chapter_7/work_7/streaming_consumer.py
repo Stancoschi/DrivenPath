@@ -53,12 +53,10 @@ def create_consumer(topic: str) -> KafkaConsumer:
     """
     consumer = KafkaConsumer(
         topic,
-        bootstrap_servers='localhost:9092',
-        value_deserializer=lambda v: json.loads(v.decode('utf-8')),
+        bootstrap_servers=['localhost:9092'],
+        value_deserializer=lambda v: json.loads(v.decode('utf-8') if v else None),
         auto_offset_reset='earliest',
-        enable_auto_commit=True,
-        group_id= 'stanco'
-        
+        enable_auto_commit=True
     )
     logging.info("Consumer created successfully.")
     return consumer
@@ -73,6 +71,7 @@ def connect_db(credentials: dict) -> psycopg2.connect:
         conn (psycopg2.connect): A connection object to the PostgreSQL database.
     """
     # Connect to the PostgreSQL server using the provided credentials.
+    print("Trimis catre POSTGRES")
     conn = psycopg2.connect(
         dbname=credentials['dbname'],
         user=credentials['user'],
@@ -111,30 +110,19 @@ def consume_data(conn: psycopg2.connect, consumer: KafkaConsumer, table_name: st
     cursor = conn.cursor()
     # Loop through each message from the Kafka consumer.
     for message in consumer:
-        if not message.value:
-            logging.warning("Recieved empty message")
-            continue
-        try:
-            data = json.loads(message.value.decode('utf-8'))
-            print("Parsed message: ",data)
-        except json.JSONDecodeError as e:
-            logging.error(f"Failed to decode message: {message.value} | Error: {e}")
-            continue
         # Extract the value from the message.
-       # print("message primit:", message.value)
-       # data = message.value
-       # 
-       # # Get all column names from the message data.
-       # columns = data.keys()  
-       # # Get corresponding values for the columns.
-       # values = [data.get(col) for col in columns]
-       # # Construct the SQL query with placeholders for the column names and values.
-       # query = f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES ({', '.join(['%s'] * len(columns))})"
-       # # Execute the SQL query with the extracted values.
-       # cursor.execute(query, values)
-       # # Commit the transaction to the database.
-       # conn.commit()
-       # logging.info(f"Data were consumed: {values}")
+        data = message.value
+        # Get all column names from the message data.
+        columns = data.keys()  
+        # Get corresponding values for the columns.
+        values = [data.get(col) for col in columns]
+        # Construct the SQL query with placeholders for the column names and values.
+        query = f"INSERT INTO {table_name} ({', '.join(columns)}) VALUES ({', '.join(['%s'] * len(columns))})"
+        # Execute the SQL query with the extracted values.
+        cursor.execute(query, values)
+        # Commit the transaction to the database.
+        conn.commit()
+        logging.info(f"Data were consumed: {values}")
 
     # Close the cursor and the database connection after processing all messages.
     cursor.close()
@@ -149,7 +137,7 @@ if __name__ == "__main__":
     credentials_path = "credentials.json"
     schema_path = "create_schema.sql"
     table_path= "create_table.sql"
-    topic = 'driven_data_stream'
+    topic = "driven_data_stream"
     table_name = "streaming_layer.streaming_data"
 
     # Get credentials for database connection.
@@ -157,7 +145,7 @@ if __name__ == "__main__":
 
     # Create database connection.
     connection = connect_db(credentials)
-    
+
     # Create Kafka consumer.
     consumer = create_consumer(topic)
     
