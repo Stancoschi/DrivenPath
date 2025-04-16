@@ -20,19 +20,24 @@ db_config = {
 
 # PostgreSQL connection string.
 connection_str = f"postgresql://{db_config['user']}:{db_config['password']}@{db_config['host']}:{db_config['port']}/{db_config['dbname']}"
-conn = psycopg2.connect(
-    dbname=db_config['dbname'],
-    user=db_config['user'],
-    password=db_config['password'],
-    host=db_config['host'],
-    port=db_config['port']
-)
-# Load data from PostgreSQL into pandas DataFrame.
-engine = create_engine(connection_str,future=True)
-query = "SELECT * FROM streaming_layer.streaming_data;"
-df = pd.read_sql(query, conn)
 
-# Define allowed columns for selection in the dropdown.
+# FIX-1 with DBAPI2 connection style
+#       conn = psycopg2.connect(
+#           dbname=db_config['dbname'],
+#           user=db_config['user'],
+#           password=db_config['password'],
+#           host=db_config['host'],
+#           port=db_config['port']
+#       )
+
+# Load data from PostgreSQL into pandas DataFrame.
+engine = create_engine(connection_str)
+
+# FIX-2 added engine.raw_connection()
+connect = engine.raw_connection() 
+query = "SELECT * FROM streaming_layer.streaming_data;"
+df = pd.read_sql_query(query, connect)
+
 allowed_columns = ["accessed_at","session_duration","download_speed","upload_speed","consumed_traffic"]
 
 # Initialize Dash app.

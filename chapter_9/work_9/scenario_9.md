@@ -7,14 +7,22 @@ Use the directory `chapter_9/work_9/` as your project directory for work related
 ## Assignment 9
 a. Develop local pipeline:
 * i. Intro Google Colab Notebook.
+Created an Google Colab Notebook    
 * ii. Initialize PySpark Session.
+Initialized PySpark Session with the code provided in the course
 * iii. Data Processing.
+Proccesed the data according to the guide
 * iv. Data Analysis.
+Analyzed and also viewed the data
 * v. Validate transformed data.
 
 b. Develop cloud pipeline:
 * i. Check raw data.
 * ii. Create IAM role.
+Knowledge from previous chapters
 * iii. Create Glue job.
+Knowledge from previous chapters
 * iv. Run Glue job.
+Watched how a Glue job should work, be setup and managed
 * v. Validate transformed data.
+Only read through the course, the docs and youtube videos out of bill payments on AWS
